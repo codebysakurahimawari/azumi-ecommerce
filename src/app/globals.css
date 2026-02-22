@@ -1,26 +1,54 @@
 @import "tailwindcss";
-
+@custom-variant dark (&:where(.dark, .dark *));
+/* ================================
+   ROOT THEME
+================================= */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #181818;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ================================
+   BASE
+================================= */
+html,
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ================================
+   TYPOGRAPHY SYSTEM
+================================= */
+.text-h1 { font-size: 40px;  }
+.text-h2 { font-size: 32px; line-height: 40px; font-weight: 500; }
+.text-h3 { font-size: 24px; line-height: 32px; font-weight: 500; }
+.text-h4 { font-size: 20px; line-height: 28px; font-weight: 500; }
+.text-h5 { font-size: 18px; line-height: 26px; font-weight: 500; }
+.text-h6 { font-size: 16px; line-height: 24px; font-weight: 500; }
+
+.text-body { font-size: 16px; line-height: 26px; font-weight: 400; }
+.text-small { font-size: 14px; line-height: 20px; font-weight: 400; }
+.text-caption { font-size: 12px; line-height: 18px; font-weight: 400; }
+
+
+/* Hide scrollbar for all browsers but retain scroll */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.animate-marquee {
+  animation: marquee 8s linear infinite;
 }
