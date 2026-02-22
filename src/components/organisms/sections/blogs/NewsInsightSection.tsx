@@ -33,7 +33,7 @@ export default function NewsInsightSection() {
     ];
 
     return (
-        <section className="py-16">
+        <section className="pb-12">
             <div className="max-w-7xl mx-auto px-6 flex flex-col gap-10">
 
                 {/* Header (Animated) */}
