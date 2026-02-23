@@ -1,5 +1,7 @@
 import ProductDetailsMolecule from "@/components/molecules/product/ProductDetailsMolecule";
 import ProductImagesMolecule from "@/components/molecules/product/ProductImagesMolecule";
+import RelatedProductsOrganism from "@/components/organisms/sections/common/RelatedProductsOrganism";
+import ProductInfoTabsOrganism from "@/components/organisms/sections/products/ProductInfoTabsOrganism";
 
 const images = [
     "/demo-images/cls-circle1.jpg",
@@ -33,6 +35,26 @@ export default function ProductDetailPage() {
                 <ProductImagesMolecule images={images} />
                 <ProductDetailsMolecule />
             </div>
+
+            <div>
+                <ProductInfoTabsOrganism
+                    description="A fitted stretch strap top designed for comfort and elegance..."
+                    composition="95% Cotton, 5% Elastane. Machine wash cold."
+                    designed="Designed in Paris"
+                    origin="Made in Italy"
+                    manufacture="Ethically manufactured in certified facilities."
+
+                    shippingSupport="Free returns within 30 days. Customer support available 24/7."
+                    importDuties="Import duties and taxes are calculated at checkout depending on your location."
+                    estimatedDelivery="3–5 business days (Domestic), 7–12 business days (International)."
+
+                    returnPolicies="Items must be returned in original condition within 30 days..."
+                />            
+            </div>
+
+            <section className="">
+                <RelatedProductsOrganism  />
+            </section>
         </div>
     );
 }
