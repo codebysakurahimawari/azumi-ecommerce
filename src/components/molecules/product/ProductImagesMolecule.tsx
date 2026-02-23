@@ -32,7 +32,7 @@ export default function ProductImagesMolecule({ images }: Props) {
             </div>
 
             {/* Main Image */}
-            <div className="relative flex-1 h-[500px] rounded-xl overflow-hidden">
+            <div className="relative flex-1 h-full rounded-xl overflow-hidden">
                 <Image
                     src={selectedImage}
                     alt="product image"
