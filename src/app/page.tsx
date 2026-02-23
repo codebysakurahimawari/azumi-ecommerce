@@ -5,11 +5,11 @@ import ProductsOfferSection from "@/components/organisms/sections/homepage/Produ
 import PromotionBannerCard from "@/components/molecules/banners/PromotionBannerCard";
 import PromotionBannerHoverCard from "@/components/molecules/banners/PromotionBannerHoverCard";
 import FestivalCTABanner from "@/components/molecules/banners/FestivalCTABanner";
-import CustomerTestimonialCard from "@/components/molecules/feedbacks/CustomerTestimoanilCard";
 import ShopInstagramSection from "@/components/organisms/sections/common/ShopInstagramSection";
 import StoreFeaturesSection from "@/components/organisms/sections/common/StoreFeaturesSection";
 import NewsInsightSection from "@/components/organisms/sections/blogs/NewsInsightSection";
 import CustomerTestimonialSection from "@/components/organisms/sections/common/CustomerTestimonialSection";
+
 const categories = [
   { title: "Women", imageUrl: "/demo-images/cls-circle5.jpg", productCount: 120 },
   { title: "Men", imageUrl: "/demo-images/cls-circle1.jpg", productCount: 90 },
@@ -19,6 +19,14 @@ const categories = [
   { title: "Watches", imageUrl: "/demo-images/cls-circle2.jpg", productCount: 45 },
 
 
+];
+
+const images = [
+  "/demo-images/cls-circle1.jpg",
+  "/demo-images/cls-circle2.jpg",
+  "/demo-images/cls-circle3.jpg",
+  "/demo-images/cls-circle4.jpg",
+  "/demo-images/cls-circle5.jpg"
 ];
 export default function Home() {
   return (
@@ -60,11 +68,13 @@ export default function Home() {
         />
       </section>
 
-     <CustomerTestimonialSection />
+      <CustomerTestimonialSection />
 
       <NewsInsightSection />
       <ShopInstagramSection />
       <StoreFeaturesSection />
+
+     
     </main>
   );
 }
