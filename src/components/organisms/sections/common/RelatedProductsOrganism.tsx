@@ -13,7 +13,7 @@ export default function RelatedProductsOrganism() {
   if (!relatedProducts?.length) return null;
 
   return (
-    <section className="py-16 lg:py-20">
+    <section className="py-12 ">
       <div className="max-w-7xl mx-auto px-4 xl:px-0">
         
         {/* Section Title */}

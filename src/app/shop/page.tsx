@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import Link from "next/link";
 import ProductCard from "@/components/molecules/product/ProductCardMain";
 import { productsData } from "@/data/productdata";
 import StoreFeaturesSection from "@/components/organisms/sections/common/StoreFeaturesSection";
 import ShopInstagramSection from "@/components/organisms/sections/common/ShopInstagramSection";
+import PageHero from "@/components/organisms/sections/hero/InnerPageHero";
 
 export default function ShopPage() {
   const allProducts = [
@@ -55,22 +55,14 @@ export default function ShopPage() {
     <main className="min-h-screen">
 
       {/* 🔥 HERO SECTION */}
-      <section className="bg-gray-100 py-16">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-5xl font-semibold mb-4">
-            Our Shop
-          </h1>
-
-          {/* Breadcrumb */}
-          <div className="flex justify-center items-center gap-2 text-sm text-gray-500">
-            <Link href="/" className="hover:text-black transition">
-              Home
-            </Link>
-            <span>/</span>
-            <span className="text-black font-medium">Shop</span>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="Our Shop"
+        subtitle="Discover premium essentials designed for everyday comfort."
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Shop" },
+        ]}
+      />
 
       {/* 🔥 SHOP CONTENT */}
       <section className="py-14">
@@ -150,8 +142,8 @@ export default function ShopPage() {
                 key={i}
                 onClick={() => setCurrentPage(i + 1)}
                 className={`w-10 h-10 border rounded-md text-sm transition ${currentPage === i + 1
-                    ? "bg-black text-white border-black"
-                    : "border-gray-300 hover:bg-gray-100"
+                  ? "bg-black text-white border-black"
+                  : "border-gray-300 hover:bg-gray-100"
                   }`}
               >
                 {i + 1}
